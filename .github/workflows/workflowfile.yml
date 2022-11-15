@@ -55,4 +55,5 @@ jobs:
           docker images -a
       - name: docker login
         run: docker login -u ${{ secrets.dockerusername }} -p ${{ secrets.dockerhubpassword }}
-
+      - name: docker image push
+        run: docker push demo-kotlin2.0
